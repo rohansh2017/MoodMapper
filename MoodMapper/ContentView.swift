@@ -32,6 +32,7 @@ struct ContentView: View {
                 Button(action: {
                     let newEntry = MoodEntry(mood: selectedMood, note: moodNote, date: Date())
                     moodEntries.append(newEntry)
+                    saveMoodEntries()
                     moodNote = ""
                 }) {
                     Text("Save Mood")
@@ -54,12 +55,26 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("MoodMapper")
+            .onAppear(perform: loadMoodEntries)
+        }
+    }
+
+    func saveMoodEntries() {
+        if let encoded = try? JSONEncoder().encode(moodEntries) {
+            UserDefaults.standard.set(encoded, forKey: "MoodEntries")
+        }
+    }
+
+    func loadMoodEntries() {
+        if let savedEntries = UserDefaults.standard.data(forKey: "MoodEntries"),
+           let decodedEntries = try? JSONDecoder().decode([MoodEntry].self, from: savedEntries) {
+            moodEntries = decodedEntries
         }
     }
 }
 
-struct MoodEntry: Identifiable {
-    let id = UUID()
+struct MoodEntry: Identifiable, Codable {
+    var id = UUID()
     let mood: String
     let note: String
     let date: Date
