@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct AnalyticsView: View {
+    var moodEntries: [MoodEntry]
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Mood Analytics")
+                .font(.largeTitle)
+                .padding()
+
+            List {
+                ForEach(groupedMoodEntries.keys.sorted(), id: \.self) { mood in
+                    HStack {
+                        Text(mood)
+                        Spacer()
+                        Text("\(groupedMoodEntries[mood]?.count ?? 0)")
+                    }
+                }
+            }
+        }
+    }
+
+    var groupedMoodEntries: [String: [MoodEntry]] {
+        Dictionary(grouping: moodEntries, by: { $0.mood })
     }
 }
 
-#Preview {
-    AnalyticsView()
+struct AnalyticsView_Previews: PreviewProvider {
+    static var previews: some View {
+        AnalyticsView(moodEntries: [
+            MoodEntry(mood: "Happy", note: "Had a great day!", date: Date()),
+            MoodEntry(mood: "Sad", note: "Not feeling well.", date: Date())
+        ])
+    }
 }

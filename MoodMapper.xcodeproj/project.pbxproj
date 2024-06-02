@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		341B37D12C062066008BA1EA /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B37D02C062066008BA1EA /* AnalyticsView.swift */; };
+		3453EAE62C09132800AC402B /* MoodLoggingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3453EAE52C09132800AC402B /* MoodLoggingView.swift */; };
+		3453EAE82C09140D00AC402B /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3453EAE72C09140D00AC402B /* MoodEntry.swift */; };
 		346998C72C04E60B0020CC0F /* MoodMapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346998C62C04E60B0020CC0F /* MoodMapperApp.swift */; };
 		346998C92C04E60B0020CC0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346998C82C04E60B0020CC0F /* ContentView.swift */; };
 		346998CB2C04E60D0020CC0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346998CA2C04E60D0020CC0F /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		341B37D02C062066008BA1EA /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		3453EAE52C09132800AC402B /* MoodLoggingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLoggingView.swift; sourceTree = "<group>"; };
+		3453EAE72C09140D00AC402B /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
 		346998C32C04E60B0020CC0F /* MoodMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		346998C62C04E60B0020CC0F /* MoodMapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodMapperApp.swift; sourceTree = "<group>"; };
 		346998C82C04E60B0020CC0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 				346998C82C04E60B0020CC0F /* ContentView.swift */,
 				346998CA2C04E60D0020CC0F /* Assets.xcassets */,
 				346998CC2C04E60D0020CC0F /* Preview Content */,
+				341B37D02C062066008BA1EA /* AnalyticsView.swift */,
+				3453EAE52C09132800AC402B /* MoodLoggingView.swift */,
+				3453EAE72C09140D00AC402B /* MoodEntry.swift */,
 			);
 			path = MoodMapper;
 			sourceTree = "<group>";
@@ -257,6 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341B37D12C062066008BA1EA /* AnalyticsView.swift in Sources */,
+				3453EAE62C09132800AC402B /* MoodLoggingView.swift in Sources */,
+				3453EAE82C09140D00AC402B /* MoodEntry.swift in Sources */,
 				346998C92C04E60B0020CC0F /* ContentView.swift in Sources */,
 				346998C72C04E60B0020CC0F /* MoodMapperApp.swift in Sources */,
 			);

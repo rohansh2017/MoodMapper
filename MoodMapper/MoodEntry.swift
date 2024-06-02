@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct MoodEntry: Identifiable, Codable {
+    var id = UUID()
+    let mood: String
+    let note: String
+    let date: Date
+}
+
